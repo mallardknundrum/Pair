@@ -15,6 +15,7 @@
 		5CA09B441E7307940003C8AC /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA09B431E7307940003C8AC /* CloudKitManager.swift */; };
 		5CA09B461E730AC60003C8AC /* NameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA09B451E730AC60003C8AC /* NameController.swift */; };
 		5CA09B481E730ED50003C8AC /* NameListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA09B471E730ED50003C8AC /* NameListTableViewController.swift */; };
+		5CA09B4B1E7316AA0003C8AC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA09B4A1E7316AA0003C8AC /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		5CA09B431E7307940003C8AC /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		5CA09B451E730AC60003C8AC /* NameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameController.swift; sourceTree = "<group>"; };
 		5CA09B471E730ED50003C8AC /* NameListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameListTableViewController.swift; sourceTree = "<group>"; };
+		5CA09B4A1E7316AA0003C8AC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CA09B4B1E7316AA0003C8AC /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +50,7 @@
 			children = (
 				5C0C78351E7304FD00EA763A /* Pair6WeekChallange */,
 				5C0C78341E7304FD00EA763A /* Products */,
+				5CA09B491E7316AA0003C8AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 			name = OtherControllers;
 			sourceTree = "<group>";
 		};
+		5CA09B491E7316AA0003C8AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CA09B4A1E7316AA0003C8AC /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +170,9 @@
 						DevelopmentTeam = 33GW7EC95V;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
 							com.apple.iCloud = {
 								enabled = 1;
 							};
