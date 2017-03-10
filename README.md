@@ -19,4 +19,4 @@ Take as much time as needed to complete the challenge. Add a note at the bottom 
 
 # Completion Time
 Everything working. Persistence with CloudKit. Time spent on project: 1:25 this morning, 1 Hour previously coming up with algorithms to shuffle the array and to break it into an array of pairs. 1 hour previously working on the logic for the tableview data source functions and for the logic on the switch. 
-*Total time, about 3:25.*
+*__Total time, about 3:25.__*
