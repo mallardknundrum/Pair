@@ -13,6 +13,8 @@
 		5C0C78411E7304FD00EA763A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0C783F1E7304FD00EA763A /* LaunchScreen.storyboard */; };
 		5CA09B421E7307780003C8AC /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA09B411E7307780003C8AC /* Name.swift */; };
 		5CA09B441E7307940003C8AC /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA09B431E7307940003C8AC /* CloudKitManager.swift */; };
+		5CA09B461E730AC60003C8AC /* NameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA09B451E730AC60003C8AC /* NameController.swift */; };
+		5CA09B481E730ED50003C8AC /* NameListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA09B471E730ED50003C8AC /* NameListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		5CA09B3A1E73069C0003C8AC /* Pair6WeekChallange.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pair6WeekChallange.entitlements; sourceTree = "<group>"; };
 		5CA09B411E7307780003C8AC /* Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
 		5CA09B431E7307940003C8AC /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		5CA09B451E730AC60003C8AC /* NameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameController.swift; sourceTree = "<group>"; };
+		5CA09B471E730ED50003C8AC /* NameListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		5CA09B3E1E7307420003C8AC /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
+				5CA09B451E730AC60003C8AC /* NameController.swift */,
 			);
 			name = ModelController;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 		5CA09B3F1E73074D0003C8AC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5CA09B471E730ED50003C8AC /* NameListTableViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -195,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CA09B481E730ED50003C8AC /* NameListTableViewController.swift in Sources */,
+				5CA09B461E730AC60003C8AC /* NameController.swift in Sources */,
 				5CA09B421E7307780003C8AC /* Name.swift in Sources */,
 				5C0C78371E7304FD00EA763A /* AppDelegate.swift in Sources */,
 				5CA09B441E7307940003C8AC /* CloudKitManager.swift in Sources */,
