@@ -9,18 +9,10 @@
 import Foundation
 
 class NameController {
+    
     static let shared = NameController()
     
-    static var dummyData: [Name] {
-        let jane = Name(withName: "Jane")
-        let john = Name(withName: "John")
-        let steve = Name(withName: "Steve")
-        let mary = Name(withName: "Mary")
-        return [jane, john, steve, mary]
-    }
-    
     var nameArray: [Name] = []
-    
     var shuffledArray: [Name] = []
     var shuffledArrays: [[Name]] = []
     var isRandom: Bool = false
@@ -70,7 +62,6 @@ class NameController {
         }
         var arrayIndex: Int?
         var nameIndex: Int?
-        
         for (aIndex, pairArray) in shuffledArrays.enumerated() {
             for (nIndex, element) in pairArray.enumerated() {
                 if element == name {
@@ -81,7 +72,7 @@ class NameController {
         }
         if let arrayIndex = arrayIndex, let nameIndex = nameIndex {
             shuffledArrays[arrayIndex].remove(at: nameIndex)
-        }
+        } else { return }
     }
     
     func deleteName(name: Name) {
@@ -92,7 +83,6 @@ class NameController {
             }
         }
         removeNameFromArrays(name: name)
-        
     }
     
     // MARK: - Helper functions
