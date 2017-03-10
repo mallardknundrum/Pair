@@ -18,5 +18,5 @@ Write a single view Pair Randomizer application that takes a list of objects and
 Take as much time as needed to complete the challenge. Add a note at the bottom of this README.md file with how long it took you to complete the challenge.
 
 # Completion Time
-Everything working. Persistence with CloudKit. Time spent on project: 1:25 this morning, 1 Hour previously coming up with algorithms to shuffle the array and to break it into an array of pairs. 1 hour previously working on the logic for the tableview data source functions and for the logic on the switch. 
+Time spent on project: 1:25 this morning, 1 Hour previously coming up with algorithms to shuffle the array and to break it into an array of pairs. 1 hour previously working on the logic for the tableview data source functions and for the logic on the switch. 
 *__Total time, about 3:25.__*
