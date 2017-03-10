@@ -11,6 +11,8 @@
 		5C0C783C1E7304FD00EA763A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0C783A1E7304FD00EA763A /* Main.storyboard */; };
 		5C0C783E1E7304FD00EA763A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C0C783D1E7304FD00EA763A /* Assets.xcassets */; };
 		5C0C78411E7304FD00EA763A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0C783F1E7304FD00EA763A /* LaunchScreen.storyboard */; };
+		5CA09B421E7307780003C8AC /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA09B411E7307780003C8AC /* Name.swift */; };
+		5CA09B441E7307940003C8AC /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA09B431E7307940003C8AC /* CloudKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,9 @@
 		5C0C783D1E7304FD00EA763A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C0C78401E7304FD00EA763A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C0C78421E7304FD00EA763A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CA09B3A1E73069C0003C8AC /* Pair6WeekChallange.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pair6WeekChallange.entitlements; sourceTree = "<group>"; };
+		5CA09B411E7307780003C8AC /* Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		5CA09B431E7307940003C8AC /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +57,64 @@
 		5C0C78351E7304FD00EA763A /* Pair6WeekChallange */ = {
 			isa = PBXGroup;
 			children = (
+				5CA09B3A1E73069C0003C8AC /* Pair6WeekChallange.entitlements */,
 				5C0C78361E7304FD00EA763A /* AppDelegate.swift */,
-				5C0C783A1E7304FD00EA763A /* Main.storyboard */,
+				5CA09B3D1E73073C0003C8AC /* Model */,
+				5CA09B3E1E7307420003C8AC /* ModelController */,
+				5CA09B3F1E73074D0003C8AC /* ViewController */,
+				5CA09B401E73075E0003C8AC /* OtherControllers */,
+				5CA09B3C1E7307320003C8AC /* Storyboards */,
+				5CA09B3B1E73072B0003C8AC /* Resources */,
+			);
+			path = Pair6WeekChallange;
+			sourceTree = "<group>";
+		};
+		5CA09B3B1E73072B0003C8AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				5C0C783D1E7304FD00EA763A /* Assets.xcassets */,
 				5C0C783F1E7304FD00EA763A /* LaunchScreen.storyboard */,
 				5C0C78421E7304FD00EA763A /* Info.plist */,
 			);
-			path = Pair6WeekChallange;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5CA09B3C1E7307320003C8AC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5C0C783A1E7304FD00EA763A /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		5CA09B3D1E73073C0003C8AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5CA09B411E7307780003C8AC /* Name.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5CA09B3E1E7307420003C8AC /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModelController;
+			sourceTree = "<group>";
+		};
+		5CA09B3F1E73074D0003C8AC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		5CA09B401E73075E0003C8AC /* OtherControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5CA09B431E7307940003C8AC /* CloudKitManager.swift */,
+			);
+			name = OtherControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +151,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 33GW7EC95V;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -134,7 +195,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CA09B421E7307780003C8AC /* Name.swift in Sources */,
 				5C0C78371E7304FD00EA763A /* AppDelegate.swift in Sources */,
+				5CA09B441E7307940003C8AC /* CloudKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Pair6WeekChallange/Pair6WeekChallange.entitlements;
 				DEVELOPMENT_TEAM = 33GW7EC95V;
 				INFOPLIST_FILE = Pair6WeekChallange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -270,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Pair6WeekChallange/Pair6WeekChallange.entitlements;
 				DEVELOPMENT_TEAM = 33GW7EC95V;
 				INFOPLIST_FILE = Pair6WeekChallange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
