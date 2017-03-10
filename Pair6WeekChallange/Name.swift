@@ -35,3 +35,10 @@ class Name {
         self.CKRecordID = CKRecord.recordID
     }
 }
+
+extension Name {
+    static func ==(lhs: Name, rhs: Name) -> Bool {
+        return lhs.name == rhs.name &&
+        lhs.CKRecordID == rhs.CKRecordID
+    }
+}

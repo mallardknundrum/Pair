@@ -22,7 +22,7 @@ class NameController {
     var nameArray: [Name] = []
     
     var shuffledArray: [Name] = []
-    var shuffledArrays:[[Name]] = []
+    var shuffledArrays: [[Name]] = []
     var isRandom: Bool = false
     
     func shuffleNamesAndBreakIntoPairs() {
@@ -38,6 +38,15 @@ class NameController {
             }
         }
         nameArray.append(name)
+        if isRandom {
+            shuffledArray.append(name)
+            if shuffledArrays.last?.count == 1 {
+                let index = shuffledArrays.count - 1
+                shuffledArrays[index].append(name)
+            } else {
+                shuffledArrays.append([name])
+            }
+        }
     }
     
     func fetchAllNames(completion: @escaping() -> Void) {
@@ -46,6 +55,44 @@ class NameController {
             completion()
             return
         }
+    }
+    
+    func removeNameFromArrays(name: Name) {
+        for (index, element) in nameArray.enumerated() {
+            if element == name {
+                nameArray.remove(at: index)
+            }
+        }
+        for (index, element) in shuffledArray.enumerated() {
+            if element == name {
+                shuffledArray.remove(at: index)
+            }
+        }
+        var arrayIndex: Int?
+        var nameIndex: Int?
+        
+        for (aIndex, pairArray) in shuffledArrays.enumerated() {
+            for (nIndex, element) in pairArray.enumerated() {
+                if element == name {
+                    arrayIndex = aIndex
+                    nameIndex = nIndex
+                }
+            }
+        }
+        if let arrayIndex = arrayIndex, let nameIndex = nameIndex {
+            shuffledArrays[arrayIndex].remove(at: nameIndex)
+        }
+    }
+    
+    func deleteName(name: Name) {
+        guard let recordID = name.CKRecordID else { return }
+        CloudKitManager.shared.deleteRecordWithID(recordID) { (_, error) in
+            if let error = error {
+                print("There was a problem deleting the record from the cloud \n \(error.localizedDescription)")
+            }
+        }
+        removeNameFromArrays(name: name)
+        
     }
     
     // MARK: - Helper functions

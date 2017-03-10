@@ -91,9 +91,27 @@ class NameListTableViewController: UITableViewController {
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            tableView.deleteRows(at: [indexPath], with: .fade)
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if NameController.shared.isRandom {
+                let name = NameController.shared.shuffledArrays[indexPath.section][indexPath.row]
+                NameController.shared.deleteName(name: name)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.reloadData()
+            } else {
+                let name = NameController.shared.nameArray[indexPath.row]
+                NameController.shared.deleteName(name: name)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
